@@ -1,6 +1,8 @@
 * { box-sizing: border-box; }
-body {
+html, body {
   font: 16px Arial; 
+  height: 100%;
+  margin: 0px;
   background-image: linear-gradient(120deg, #000000 0%, #006870 100%);
 }
 .autocomplete {
