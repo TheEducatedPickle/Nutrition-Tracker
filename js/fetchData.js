@@ -7,7 +7,7 @@ var databasekey = "10SKlZqWe3IkC3ymxUWxzMrjgUfNFuixcuqY10gC";
 var dbnum = `01009`;
 var ntCategories = '&nutrients=205&nutrients=204&nutrients=208&nutrients=269';
 
-function searchItem(searchTerm="milk") {
+function searchItem(searchTerm="soylent") {
   //var query = `https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${databasekey}${ntCategories}&ndbno=${dbnum}`;
   var query = `https://api.nal.usda.gov/ndb/search/?format=json&q=${searchTerm}&sort=r&max=25&offset=0&api_key=${databasekey}`;
   request.open('GET', query, true);
@@ -16,12 +16,17 @@ function searchItem(searchTerm="milk") {
     var json = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
       console.log (formatTitle(json.list.item[0].name));
-      autocomplete = [json.list.item.map(e => e.name)]
+      console.log (json.list.item.map(e => formatTitle(e.name)));
     } else {
       console.log('Request timeout');
     }
   }
   request.send();
+}
+
+function getSuggestions(searchTerm="chicken") {
+  let suggestions = searchItem(searchTerm);
+  console.log(suggestions);
 }
 
 function listItems() {
@@ -39,7 +44,8 @@ function listItems() {
     request.send();
 }
 
-function formatTitle(text) {
+function formatTitle(text) {  //Removes UPC and formats capitalization
+  text = text.split(',')[0] //Remove UPC
   return text.toLowerCase()
     .split(' ')
     .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
