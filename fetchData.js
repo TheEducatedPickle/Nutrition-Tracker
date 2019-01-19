@@ -8,8 +8,9 @@ var request=new XMLHttpRequest();
 request.open('GET',test);
 request.responseType = 'json';
 console.log("in here 1");
-request.onload=function(){
-    console.log(" in on load");
+request.onload=getResponse();
+
+function getResponse(){
     var lol=request.response;
     console.log(lol);
 }
