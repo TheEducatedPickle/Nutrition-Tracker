@@ -17,6 +17,7 @@ function searchItem(searchTerm="soylent") {
     if (request.status >= 200 && request.status < 400) {
       console.log (formatTitle(json.list.item[0].name));
       console.log (json.list.item.map(e => formatTitle(e.name)));
+      return json.list.item.map(e => formatTitle(e.name));
     } else {
       console.log('Request timeout');
     }
@@ -26,7 +27,7 @@ function searchItem(searchTerm="soylent") {
 
 function getSuggestions(searchTerm="chicken") {
   let suggestions = searchItem(searchTerm);
-  console.log(suggestions);
+  console.log("Returned" + suggestions);
 }
 
 function listItems() {
@@ -38,7 +39,7 @@ function listItems() {
       if (request.status >= 200 && request.status < 400) {
         console.log(json.report.foods[0].nutrients[0].value);
       } else {
-        console.log('Request timeout');
+        console.log('Request timexout');
       }
     }
     request.send();
