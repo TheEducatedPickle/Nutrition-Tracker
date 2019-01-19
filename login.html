@@ -107,6 +107,7 @@ h1 {
  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
+  border:none;
   background-image: linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);
   font-size: 1.5rem;
   color: white;
@@ -120,7 +121,8 @@ h1 {
     float: left;
 }
 .button:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
+  cursor:click; /* change the direction of the change here */
 }
 </style>
 
@@ -132,10 +134,10 @@ h1 {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                   <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
+                      <li class="nav-item">
                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                       <a class="nav-link" href="login.html">Login</a>
                     </li>
                     <li class="nav-item">
@@ -160,7 +162,7 @@ h1 {
     
                                         <div class="left-addon inner-addon">
                                                 <i class="fa fa-user fa-gradient"></i>
-                                                <input style="border-top:0px;border-right:0px;border-left:0px"type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                                <input style="border-top:0px;border-right:0px;border-left:0px"type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
                                         </div>
                                         
                     
@@ -169,12 +171,12 @@ h1 {
                     
                                         <div class="left-addon inner-addon">
                                                 <i class="fa fa-lock fa-gradient"></i>
-                                                <input type="password"style="border-top:0px;border-right:0px;border-left:0px" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                <input type="password"style="border-top:0px;border-right:0px;border-left:0px" class="form-control" id="loginPassword" placeholder="Password">
                                         </div>
                                        
                                       </div>
                                       <div class="btn-group">
-                                            <button class="button"  style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">Sumbit</button>
+                                            <button class="button" onclick="signIn()" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">Sumbit</button>
                                             <button class="button"  style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%;">Sign Up</button>
                                       </div>
                                      
@@ -218,6 +220,16 @@ h1 {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="./loginhandler.js"></script>
+    <script>
+       
+        function signIn(){
+            if(email!=null && password!=null){
+                signInUser(email,password);
+
+            }
+        }
+        
+    </script>
 </body>
 
 </html>
