@@ -46,16 +46,25 @@
   </nav>
 
   <div id="introGroup"></div>
-  <h1 id="greeting">Good morning, Austin</h1>
-  <h3 id="subgreeting">What did you have for breakfast today?</h3>
+  <h1 id="greeting">Hello, Austin</h1>
+  <h3 id="subgreeting">What did you have today?</h3>
   </div>
 
-  <form autocomplete="off" style="margin: 0% 20% 0% 20%">
+  <form id="searchForm" autocomplete="off">
     <div class="autocomplete">
       <input type="text" id="searchField" class="autocomplete" class="formControl" placeholder="Search" aria-label="Recipient's username"
-        aria-describedby="button-addon2" onKeyDown="if(event.keyCode==13) searchItem(document.getElementById('searchField').value);">
+        aria-describedby="button-addon2" onKeyDown="if(event.keyCode==13) searchItem(document.getElementById('searchField').value);"
+        oninput="//searchItem(document.getElementById('searchField').value);">
     </div>
   </form>
+
+  <div id="nutritionPaper">
+    <h3 class="paperTextHeader"><b>Nutrition:</b> </h3>
+    <p class="paperText"><b>Energy: </b></p>
+    <p class="paperText"><b>Sugars: </b></p>
+    <p class="paperText"><b>Total lipids (fats): </b></p>
+    <p class="paperText"><b>Carbohydrates: </b></p>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

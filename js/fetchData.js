@@ -9,6 +9,7 @@ function searchItem(searchTerm) {
   //var query = `https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${databasekey}${ntCategories}&ndbno=${dbnum}`;
   var searchQuery = `https://api.nal.usda.gov/ndb/search/?format=json&q=${searchTerm}&sort=r&max=5&offset=0&api_key=${databasekey}`;
   $.get(searchQuery, function(data){
+    //autocomplete(document.getElementById("searchField"), data.list.item);
     let selectIndex = 0;
     let selectedItem = data.list.item[selectIndex];
     console.log("Database number: " + selectedItem.name);
