@@ -1,21 +1,28 @@
-var provider = new firebase.auth.GoogleAuthProvider();
+var database=firebase.database();
 
-var database = firebase.database()
+var highPrice=0;
+database.ref().on("value", function(snapshot){
+    console.log("value recieved")
+})
+database.ref().set({
+    password: 10
+})
 
-function createUser(userId,email,password){
-    function writeUserData(userId, password, email) {
-        firebase.database().ref('users/' + userId).set({
-          username: userId,
-          email: email,
-          password: password,
-        });
-      }
+database.ref().set({
+    highPrice: 5
+});
+function writeUser(email,password){
+    database.ref('users'+ email).set({
+        password: password
+    })
+};
+function createUser(email,password){
     console.log("Creating user")
     console.log("hi");
     debugger;
     authObject = firebase.auth();
     console.log("im working");
-    console.log(authObject.currentUser)
+    console.log(authObject);
     authObject.createUserWithEmailAndPassword(email, password).catch(function(error) {
     // Handle Errors here.
         var errorCode = error.code;
