@@ -13,12 +13,11 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
 
   <!-- Add additional services that you want to use -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
-
-
-
-
+  <script src="./js/userhandler.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -211,7 +210,7 @@
         <div class="card" style="width:35%;height:140%;margin-left:30%;margin-right:30%;margin-top:10%;text-align:center">
           <h1>Sign Up</h1>
           <div class="container">
-            <form>
+            <form autocomplete="off">
               <div class="form-group">
 
                 <div class="left-addon inner-addon">
@@ -241,13 +240,14 @@
                 </div>
 
               </div>
-              <div class="btn-group">
-                <button class="button" onclick="signingUp()" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">
-                  <a href="./home.html">Sumbit</a>
-                </button>
-              </div>
-
             </form>
+            <div class="btn-group">
+              <button class="button" onclick="addUser($('#displayName').val(),$('#signUpEmail').val(),$('#signUpPassword').val());"
+                style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">
+                <!-- <a href="./home.html">Sumbit</a> -->
+                Sumbit
+              </button>
+            </div>
           </div>
 
         </div>
@@ -256,21 +256,7 @@
 
     </div>
   </div>
-
   </div>
 </body>
-<script>
-  function signingUp() {
-    console.log("Entering signingUp")
-    var email = document.getElementById('signUpEmail').value;
-    var password = document.getElementById('signUpPassword').value;
-    var name = document.getElementById('displayName');
-    console.log(email);
-    console.log(password);
-    debugger;
-
-  }
-</script>
-<script src="loginhandler.js"></script>
 
 </html>

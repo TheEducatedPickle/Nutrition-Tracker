@@ -16,6 +16,7 @@
   <!-- Add additional services that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
+  <script src="./js/userhandler.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -231,19 +232,17 @@
                   <input type="password" style="border-top:0px;border-right:0px;border-left:0px" class="form-control"
                     id="loginPassword" placeholder="Password">
                 </div>
-
               </div>
-              <div class="btn-group">
-                <button class="button" onclick="signIn()" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">
-                  <a href="./home.html">Sumbit</a>
-                </button>
-
-                <button class="button" onclick="location.href='signup.html'" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%;">
-                  <a href="./signup.html">Sign Up</a>
-                </button>
-              </div>
-
             </form>
+            <div class="btn-group">
+              <button class="button" onclick="authUser($('#loginEmail').val(),$('#loginPassword').val())" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">
+                Sumbit
+              </button>
+
+              <button class="button" onclick="location.href='signup.html'" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%;">
+                <a href="./signup.html">Sign Up</a>
+              </button>
+            </div>
           </div>
 
         </div>
@@ -259,17 +258,6 @@
         crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-      <script src="./loginhandler.js"></script>
-      <script>
-
-        function signIn() {
-          if (email != null && password != null) {
-            signInUser(email, password);
-
-          }
-        }
-
-      </script>
 </body>
 
 </html>
