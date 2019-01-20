@@ -66,12 +66,13 @@
     <p id="sugars" class="paperText"></p>
     <p id="lipids" class="paperText"></p>
     <p id="carbs" class="paperText"></p>
+    <span id="addFood" onclick="updateUser($(energy).html().replace( /^\D+/g, ''),$(sugars).html().replace( /^\D+/g, ''),$(lipids).html().replace( /^\D+/g, ''),$(carbs).html().replace( /^\D+/g, ''))"class="fa fa-plus-circle"></span>
   </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script>
-    autocomplete(document.getElementById("searchField"), ["banana", "blueberry", "beans", "berry", "blueberry", "sandwich"]);
+    autocomplete(document.getElementById("searchField"), ['apple','asparagus','avocado','artichoke','apricot','banana','beans','broccoli','bacon','bread','carrot','cranberry','celery','cabbage','coconut','chicken','calamari','duck','durian','dates','fish','grapes','garlic','guava','ginger','grapefruit','honeydew','ham','hazelnut','ice cream','jackfruit','jellyfish','kale','kiwi','kimchi','lamb','lemon','lime','lobster','lychee','mango','milk','mushroom','mint','nectarine','noodles','octopus','onion','oyster','olive','orange','peach','pear','papaya','pasta','pineapple','potatoes','quinoa','rice','raisin','radish','salad','soba','soy milk','sweet potato','strawberry','tomato','tofu','tuna','turkey','trout','vermicelli','veal','watermelon','watercress','walnut','yoghurt','zucchini']);
   </script>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script> -->
