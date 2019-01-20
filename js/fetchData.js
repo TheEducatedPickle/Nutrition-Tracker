@@ -1,9 +1,9 @@
 //Map values to html elements
-var docMap = {}
-docMap["Energy"] = "#energy";
-docMap["Sugars, total"] = "#sugars";
-docMap["Total lipid (fat)"] = "#lipids";
-docMap["Carbohydrate, by difference"] = "#carbs"
+var valToHTML = {}  //Syntax: ["elementID", "displayName"]
+valToHTML["Energy"] = ["#energy", "Calories"];
+valToHTML["Sugars, total"] = ["#sugars", "Sugars"];
+valToHTML["Total lipid (fat)"] = ["#lipids", "Fats"];
+valToHTML["Carbohydrate, by difference"] = ["#carbs", "Carbohydrates"];
 
 //Config
 var databasekey = "10SKlZqWe3IkC3ymxUWxzMrjgUfNFuixcuqY10gC";
@@ -20,9 +20,10 @@ function searchItem(searchTerm) {
     console.log("Database entry: " + selectedItem.name);
     var nutritionQuery = `https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${databasekey}${ntCategories}&ndbno=${selectedItem.ndbno}`;
     $.get(nutritionQuery, function(data) {
+      $(foodName).text("Nutrition Data for " + selectedItem.name);
       data.report.foods[0].nutrients.forEach((e) => {
-        console.log(docMap[e.nutrient] + ": " + e.value);
-        $(docMap[e.nutrient]).html(e.value);
+        console.log(valToHTML[e.nutrient][0] + ": " + e.value);
+        $(valToHTML[e.nutrient][0]).html(valToHTML[e.nutrient][1] + ": " + e.value);
       })
     })
   })
