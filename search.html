@@ -18,7 +18,14 @@
   <script type="text/JavaScript" src="./js/autocomplete.js"></script>
   <script src="./js/userhandler.js"></script>
 </head>
+<style>
+    .fa-gradient {
+    background: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark rightBar" style="background-color:none;">
     <a class="navbar-brand" href="#">Diet Tracker</a>
@@ -38,15 +45,14 @@
           <a class="nav-link" href="home.html">Charts</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="recipe.html">Recipe Generator</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="login.html">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="signup.html">Sign Up</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="recipe.html">Recipe Generator</a>
-
-          </li>
       </ul>
     </div>
   </nav>
@@ -70,12 +76,8 @@
     <p id="sugars" class="paperText"></p>
     <p id="lipids" class="paperText"></p>
     <p id="carbs" class="paperText"></p>
-<<<<<<< HEAD
-
-=======
     <span id="addFood" onclick="updateUser($(energy).html().replace( /^\D+/g, ''),$(sugars).html().replace( /^\D+/g, ''),$(lipids).html().replace( /^\D+/g, ''),$(carbs).html().replace( /^\D+/g, ''))"
-      class="fa fa-plus-circle"></span>
->>>>>>> 43a4735d538495ef3d9918c02cce89f18a288316
+      class="fa fa-plus-circle fa-gradient"></span>
   </div>
 
   <!-- Optional JavaScript -->

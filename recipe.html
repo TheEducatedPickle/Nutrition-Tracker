@@ -195,22 +195,25 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <!-- <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Charts</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="recipe.html">Recipe Generator</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="home.html">Charts</a>
                 </li>
             </ul>
         </div>
@@ -225,16 +228,17 @@
                             <div class="form-group">
 
                                 <div class="left-addon inner-addon">
-                                    <input style="border-top:0px;border-right:0px;border-left:0px" type="text" class="form-control" id="mainingredient" aria-describedby="emailHelp"
-                                        placeholder="Enter main ingredient">
+                                    <input style="border-top:0px;border-right:0px;border-left:0px" type="text" class="form-control"
+                                        id="mainingredient" aria-describedby="emailHelp" placeholder="Enter main ingredient">
                                 </div>
 
 
                             </div>
                         </form>
                         <div class="input-group mb-3" style="border:none">
-                            <div class="input-group-prepend"  style="border:none;">
-                                <label class="input-group-text" style="background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);border:none;" for="inputGroupSelect01"><text style="color:white">Diet</text></label>
+                            <div class="input-group-prepend" style="border:none;">
+                                <label class="input-group-text" style="background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);border:none;"
+                                    for="inputGroupSelect01"><text style="color:white">Diet</text></label>
                             </div>
                             <select class="custom-select" id="inputGroupSelect01">
 
@@ -247,40 +251,41 @@
                             </select>
                         </div>
                         <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox"  id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" name="type" for="inlineCheckbox1">Peanut-free</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox"  id="inlineCheckbox2" value="option2">
-                                <label class="form-check-label" name="type" for="inlineCheckbox2">Dairy-free</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                                    <label class="form-check-label" name="type" for="inlineCheckbox3">Vegetarian</label>
-                                  </div>
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" name="type" for="inlineCheckbox1">Peanut-free</label>
                         </div>
-                        <div class="input-group" style="margin:5%;margin-right:5%">
-                                <div class="input-group-prepend"  style="border-radius:5px;border:none;background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%)">
-                                  <span class="input-group-text" style="color:white;background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%)">Calories</span>
-                                </div>
-                                <input type="text" aria-label="First name"id="min" placeholder="min"class="form-control">
-                                <input style="margin-right:10%"type="text" id="max"aria-label="Last name" placeholder ="max" class="form-control">
-                              </div>
-                       
-                            <button class="button" onclick="showRecipe()">
-                                Generate
-                            </button>
-                         
-                            <button class="button hidden" id="click">
-                                    Click
-                            </button>
-                           
-                    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" name="type" for="inlineCheckbox2">Dairy-free</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" name="type" for="inlineCheckbox3">Vegetarian</label>
+                        </div>
                     </div>
-                </div>
+                    <div class="input-group" style="margin:5%;margin-right:5%">
+                        <div class="input-group-prepend" style="border-radius:5px;border:none;background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%)">
+                            <span class="input-group-text" style="color:white;background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%)">Calories</span>
+                        </div>
+                        <input type="text" aria-label="First name" id="min" placeholder="min" class="form-control">
+                        <input style="margin-right:10%" type="text" id="max" aria-label="Last name" placeholder="max"
+                            class="form-control">
+                    </div>
 
-                <!-- Optional JavaScript -->
-                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                    <button class="button" onclick="showRecipe()">
+                        Generate
+                    </button>
+
+                    <button class="button hidden" id="click">
+                        Click
+                    </button>
+
+
+                </div>
+            </div>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 </body>
 
