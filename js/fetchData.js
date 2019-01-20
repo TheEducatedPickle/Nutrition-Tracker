@@ -7,16 +7,17 @@ var databasekey = "10SKlZqWe3IkC3ymxUWxzMrjgUfNFuixcuqY10gC";
 var dbnum = `01009`;
 var ntCategories = '&nutrients=205&nutrients=204&nutrients=208&nutrients=269';
 
-function searchItem(searchTerm="soylent") {
+function searchItem(searchTerm) {
   //var query = `https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${databasekey}${ntCategories}&ndbno=${dbnum}`;
   var query = `https://api.nal.usda.gov/ndb/search/?format=json&q=${searchTerm}&sort=r&max=25&offset=0&api_key=${databasekey}`;
+  console.log("Query: " + query);
   request.open('GET', query, true);
   request.onload = function () {
     console.log(searchTerm)
     var json = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
-      console.log (formatTitle(json.list.item[0].name));
-      console.log (json.list.item.map(e => formatTitle(e.name)));
+      console.log ("First search result: " + formatTitle(json.list.item[0].name));
+      console.log ("Array output: " + json.list.item.map(e => formatTitle(e.name)));
       return json.list.item.map(e => formatTitle(e.name));
     } else {
       console.log('Request timeout');
@@ -26,8 +27,9 @@ function searchItem(searchTerm="soylent") {
 }
 
 function getSuggestions(searchTerm="chicken") {
+  console.log("In get Suggestions");
   let suggestions = searchItem(searchTerm);
-  console.log("Returned" + suggestions);
+  console.log("Get suggestions returned: " + suggestions);
 }
 
 function listItems() {
