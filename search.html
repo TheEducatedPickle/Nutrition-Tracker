@@ -18,7 +18,14 @@
   <script type="text/JavaScript" src="./js/autocomplete.js"></script>
   <script src="./js/userhandler.js"></script>
 </head>
+<style>
+    .fa-gradient {
+    background: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark rightBar" style="background-color:none;">
     <a class="navbar-brand" href="#">Diet Tracker</a>
@@ -70,7 +77,7 @@
     <p id="lipids" class="paperText"></p>
     <p id="carbs" class="paperText"></p>
     <span id="addFood" onclick="updateUser($(energy).html().replace( /^\D+/g, ''),$(sugars).html().replace( /^\D+/g, ''),$(lipids).html().replace( /^\D+/g, ''),$(carbs).html().replace( /^\D+/g, ''))"
-      class="fa fa-plus-circle"></span>
+      class="fa fa-plus-circle fa-gradient"></span>
   </div>
 
   <!-- Optional JavaScript -->
