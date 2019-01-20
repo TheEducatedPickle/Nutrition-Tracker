@@ -1,20 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script type="text/JavaScript" src="./js/doughnutchart.js"></script>
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script type="text/JavaScript" src="./js/doughnutchart.js"></script>
+  <script src="jquery-3.3.1.min.js"></script>
+</head>
 
 <div id="hover" class="chart">
-<style>
-  
-  .flex-wrapper {
+  <style>
+
+    .flex-wrapper {
     display: flex;
     flex-flow: row nowrap;
   }
@@ -219,6 +222,7 @@
   opacity: .65; 
 }
     </style>
+<<<<<<< HEAD
     
    <body>
       <nav class="navbar navbar-expand-lg navbar-dark leftBar" style="background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);margin:0;">
@@ -247,92 +251,123 @@
             </ul>
           </div>
         </nav>
-      </div>
-      <ul class="bar-graph">
-          <li class="bar-graph-axis">
-              <div class="bar-graph-label">100%</div>
-              <div class="bar-graph-label">80%</div>
-              <div class="bar-graph-label">60%</div>
-              <div class="bar-graph-label">40%</div>
-              <div class="bar-graph-label">20%</div>
-              <div class="bar-graph-label">0%</div>
-            </li>
-            <li class="bar sun" style="height: 95%;" title="95">
-              <div class="percent">95<span>%</span></div>
-              <div class="description">Sunday</div>
-            </li>
-            <li class="bar mon" style="height: 90%;" title="90">
-              <div class="percent">90<span>%</span></div>
-              <div class="description">Monday</div>
-            </li>
-            <li class="bar tues" style="height: 80%;" title="80">
-              <div class="percent">80<span>%</span></div>
-              <div class="description">Tuesday</div>
-            </li>
-            <li class="bar wed" style="height: 75%;" title="75">
-              <div class="percent">75<span>%</span></div>
-              <div class="description">Wednesday</div>
-            </li>
-            <li class="bar thurs" style="height: 40%;" title="40">
-              <div class="percent">40<span>%</span></div>
-              <div class="description">Thursday</div>
-            </li>
-            <li class="bar fri" style="height: 20%;" title="20">
-              <div class="percent">20<span>%</span></div>
-              <div class="description">Friday</div>
-            </li>
-            <li class="bar sat" style="height: 10%;" title="10">
-              <div class="percent">10<span>%</span></div>
-              <div class="description">Saturday</div>
-            </li>
-          </ul>
-      </ul>
-     
- 
-   
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  </body>
-</html>
+=======
 
   <body>
-      <div class="flex-wrapper">
-          <div class="single-chart">
-              <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg" d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831" />
-                  <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831" />
-                  <text x="18" y="20.35" class="percentage">30%</text>
-              </svg>
-          </div>
-  
-          <div class="single-chart">
-              <svg viewBox="0 0 36 36" class="circular-chart green">
-                  <path class="circle-bg" d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831" />
-                  <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831" />
-                  <text x="18" y="20.35" class="percentage">60%</text>
-              </svg>
-          </div>
-  
-          <div class="single-chart">
-              <svg viewBox="0 0 36 36" class="circular-chart blue">
-                  <path class="circle-bg" d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831" />
-                  <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831" />
-                  <text x="18" y="20.35" class="percentage">90%</text>
-              </svg>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-dark leftBar" style="background-image:linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);margin:0;">
+      <a class="navbar-brand" href="#">Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">Search</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+>>>>>>> 2379a6cf5881060ae339a482ef9111071942a8ad
       </div>
+    </nav>
+</div>
+<ul class="bar-graph">
+  <li class="bar-graph-axis">
+    <div class="bar-graph-label">100%</div>
+    <div class="bar-graph-label">80%</div>
+    <div class="bar-graph-label">60%</div>
+    <div class="bar-graph-label">40%</div>
+    <div class="bar-graph-label">20%</div>
+    <div class="bar-graph-label">0%</div>
+  </li>
+  <li class="bar sun" style="height: 95%;" title="95">
+    <div class="percent">95<span>%</span></div>
+    <div class="description">Sunday</div>
+  </li>
+  <li class="bar mon" style="height: 90%;" title="90">
+    <div class="percent">90<span>%</span></div>
+    <div class="description">Monday</div>
+  </li>
+  <li class="bar tues" style="height: 80%;" title="80">
+    <div class="percent">80<span>%</span></div>
+    <div class="description">Tuesday</div>
+  </li>
+  <li class="bar wed" style="height: 75%;" title="75">
+    <div class="percent">75<span>%</span></div>
+    <div class="description">Wednesday</div>
+  </li>
+  <li class="bar thurs" style="height: 40%;" title="40">
+    <div class="percent">40<span>%</span></div>
+    <div class="description">Thursday</div>
+  </li>
+  <li class="bar fri" style="height: 20%;" title="20">
+    <div class="percent">20<span>%</span></div>
+    <div class="description">Friday</div>
+  </li>
+  <li class="bar sat" style="height: 10%;" title="10">
+    <div class="percent">10<span>%</span></div>
+    <div class="description">Saturday</div>
+  </li>
+</ul>
+</ul>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<body>
+  <div class="flex-wrapper">
+    <div class="single-chart">
+      <svg viewBox="0 0 36 36" class="circular-chart orange">
+        <path class="circle-bg" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <text x="18" y="20.35" class="percentage">30%</text>
+      </svg>
+    </div>
+
+    <div class="single-chart">
+      <svg viewBox="0 0 36 36" class="circular-chart green">
+        <path class="circle-bg" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <text x="18" y="20.35" class="percentage">60%</text>
+      </svg>
+    </div>
+
+    <div class="single-chart">
+      <svg viewBox="0 0 36 36" class="circular-chart blue">
+        <path class="circle-bg" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <text x="18" y="20.35" class="percentage">90%</text>
+      </svg>
+    </div>
+  </div>
