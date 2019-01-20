@@ -15,7 +15,7 @@ function searchItem(search,min,max,diet,health) {
       var placeHolder = document.getElementById("click");
       placeHolder.className="button";
       var temp=placeHolder.innerHTML;
-      var url=`<a href=${url}>Click</a>`
+      var url=`<a href=${url}>Click Here!</a>`
       placeHolder.innerHTML=url;
       //autocomplete(document.getElementById("searchField"), data.list.item);
     })
@@ -38,7 +38,6 @@ function showRecipe(){
     for(var i=0;i<yourArray.length;i++){
         health='&health='+yourArray[i];
     }
-    print(yourArray)
     query=query.toLowerCase();
     diet=diet.toLowerCase();
     if(diet=="none"){
