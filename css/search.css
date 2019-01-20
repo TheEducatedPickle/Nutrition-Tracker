@@ -3,7 +3,7 @@ html, body {
   font: 16px Arial; 
   height: 100%;
   margin: 0px;
-  background-image: linear-gradient(120deg, #000000 0%, #006870 100%);
+  background-image: linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);
 }
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -67,7 +67,7 @@ input[type=submit] {
 
 #subgreeting {
   font-size: 28px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   color: #fafafa;
   text-align: center;
 }
