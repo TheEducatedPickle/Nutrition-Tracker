@@ -10,8 +10,15 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
+
+
+
+
   <script>
     // Initialize Firebase
     var config = {
@@ -24,11 +31,6 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script src="/__/firebase/5.8.0/firebase-auth.js"></script>
-  <script src="/__/firebase/5.8.0/firebase-database.js"></script>
-  <script src="/__/firebase/5.8.0/firebase-messaging.js"></script>
-  <script src="/__/firebase/5.8.0/firebase-functions.js"></script>
-  <script src="/__/firebase/init.js"></script>
 </head>
 <style>
   body{
@@ -161,7 +163,7 @@ h1 {
 
                 <div class="left-addon inner-addon">
                   <i class="fa fa-user fa-gradient"></i>
-                  <input style="border-top:0px;border-right:0px;border-left:0px" type="email" class="form-control" id="exampledisplayName"
+                  <input style="border-top:0px;border-right:0px;border-left:0px" class="form-control" id="displayName"
                     aria-describedby="emailHelp" placeholder="Enter Display Name">
                 </div>
 
@@ -171,7 +173,7 @@ h1 {
 
                 <div class="left-addon inner-addon">
                   <i class="fa fa-envelope fa-gradient"></i>
-                  <input style="border-top:0px;border-right:0px;border-left:0px" type="email" class="form-control" id="exampleInputEmail1"
+                  <input style="border-top:0px;border-right:0px;border-left:0px" type="email" class="form-control" id="signUpEmail"
                     aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
 
@@ -182,12 +184,12 @@ h1 {
                 <div class="left-addon inner-addon">
                   <i class="fa fa-lock fa-gradient"></i>
                   <input type="password" style="border-top:0px;border-right:0px;border-left:0px" class="form-control"
-                    id="exampleInputPassword1" placeholder="Password">
+                    id="signUpPassword" placeholder="Password">
                 </div>
 
               </div>
               <div class="btn-group">
-                <button class="button" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">Sumbit</button>
+                <button class="button" onclick="signingUp()" style="display:inline-block;float:left;margin-top:28%;margin-bottom:20%">Sumbit</button>
               </div>
 
             </form>
@@ -201,35 +203,18 @@ h1 {
   </div>
 
   </div>
-
-
-
-
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+  </body>
   <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDNVpXLwiVU8KsVdonDc8wYffydTXEAXCg",
-      authDomain: "cruzhacks-2019.firebaseapp.com",
-      databaseURL: "https://cruzhacks-2019.firebaseio.com",
-      projectId: "cruzhacks-2019",
-      storageBucket: "cruzhacks-2019.appspot.com",
-      messagingSenderId: "123764068447"
-    };
-    firebase.initializeApp(config);
+    function signingUp(){
+      console.log("Entering signingUp")
+      var email=document.getElementById('signUpEmail').value;
+      var password=document.getElementById('signUpPassword').value;
+      var name=document.getElementById('displayName');
+      console.log(email);
+      console.log(password);
+      debugger;
+      createUser(name,email,password);
+    }
   </script>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
-  <script src="./loginhandler.js"></script>
-</body>
-
+  <script src="loginhandler.js"></script>
 </html>
