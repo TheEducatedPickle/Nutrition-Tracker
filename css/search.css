@@ -5,6 +5,14 @@ html, body {
   margin: 0px;
   background-image: linear-gradient(45deg, #ffc3a0 0%, #ffafbd 100%);
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
@@ -18,7 +26,7 @@ input {
   background-color: #fafafa;
   padding: 10px;
   font-size: 16px;
-}
+} 
 input[type=text] {
   background-color: #fafafa;
   width: 100%;
@@ -39,10 +47,9 @@ input[type=submit] {
   right: 0;
 }
 .autocomplete-items div {
-  padding: 10px;
+  padding: 1px;
   cursor: pointer;
   background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
@@ -58,11 +65,16 @@ input[type=submit] {
   margin-top:4%;
 }
 
+#searchForm {
+  margin: 0% 25% 0% 25%;
+}
+
 #greeting {
   font-size: 60px;
   color: #fafafa;
   text-align: center;
-  margin-bottom: 4%;
+  margin-top: 3%;
+  margin-bottom: 2%;
 }
 
 #subgreeting {
@@ -75,4 +87,28 @@ input[type=submit] {
 #searchField {
   border:none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#nutritionPaper {
+  margin: 0% 20% 3% 20%;
+  padding: 2% 3% 0% 3%;
+  position: fixed;
+  bottom: 0;
+  border:none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #fafafa;
+  width: 60%;
+  height: 30%;
+  border-radius: 8px;
+}
+
+.paperTextHeader {
+  margin-top: 10px;
+  margin: 0;
+  color: #444444;
+}
+
+.paperText {
+  margin: 1px;
+  color: #444444;
 }
