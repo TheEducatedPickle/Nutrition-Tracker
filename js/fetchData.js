@@ -23,7 +23,7 @@ function searchItem(searchTerm) {
       $(foodName).text("Nutrition Data for " + selectedItem.name);
       data.report.foods[0].nutrients.forEach((e) => {
         console.log(valToHTML[e.nutrient][0] + ": " + e.value);
-        $(valToHTML[e.nutrient][0]).html(valToHTML[e.nutrient][1] + ": " + e.value);
+        $(valToHTML[e.nutrient][0]).html("<b>" + valToHTML[e.nutrient][1] + ": </b>" + e.value);
       })
     })
   })
