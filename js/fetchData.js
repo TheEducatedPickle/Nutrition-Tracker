@@ -20,11 +20,18 @@ function searchItem(searchTerm) {
     console.log("Database entry: " + selectedItem.name);
     var nutritionQuery = `https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${databasekey}${ntCategories}&ndbno=${selectedItem.ndbno}`;
     $.get(nutritionQuery, function(data) {
-      $(foodName).text("Nutrition Data for " + selectedItem.name);
+      $(foodName).text("Nutrition Data for " + formatTitle(selectedItem.name));
       data.report.foods[0].nutrients.forEach((e) => {
         console.log(valToHTML[e.nutrient][0] + ": " + e.value);
         $(valToHTML[e.nutrient][0]).html("<b>" + valToHTML[e.nutrient][1] + ": </b>" + e.value);
       })
     })
   })
+}
+
+function formatTitle(text) {  //Removes UPC and formats capitalization
+  return text.toLowerCase()
+    .split(' ')
+    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+    .join(' ');
 }
