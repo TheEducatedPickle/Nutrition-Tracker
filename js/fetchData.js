@@ -20,7 +20,7 @@ function searchItem(searchTerm) {
     console.log("Database entry: " + selectedItem.name);
     var nutritionQuery = `https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=${databasekey}${ntCategories}&ndbno=${selectedItem.ndbno}`;
     $.get(nutritionQuery, function(data) {
-      $(foodName).html("<b>Nutrition Data for " + formatTitle(selectedItem.name) + "<b>");
+      $(foodName).html("<b>Nutritional Data for " + formatTitle(selectedItem.name) + "<b>");
       data.report.foods[0].nutrients.forEach((e) => {
         console.log(valToHTML[e.nutrient][0] + ": " + e.value);
         $(valToHTML[e.nutrient][0]).html("<b>" + valToHTML[e.nutrient][1] + ": </b>" + e.value + " grams");
