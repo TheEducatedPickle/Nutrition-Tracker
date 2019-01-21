@@ -103,15 +103,16 @@ input[type=submit] {
 }
 
 .paperTextHeader {
-  margin-top: 10px;
-  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 15px;
   font-weight: 350;
-  color: #4e4e4e;
+  color: #5a5a5a;
 }
 
 .paperText {
-  margin: 1px;
-  color: #444444;
+  margin: 0px;
+  color: #5a5a5a;
+  font-size: 16px;
 }
 
 #addFood {
