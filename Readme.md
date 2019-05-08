@@ -9,5 +9,3 @@ Diet Trackr is a diet companion website that helps users monitor their nutrition
 * Recipe generator with numerous filtering options
 
 Created in 3 days for Cruzhacks 2019
-
-You can view a static version of this project at: https://theeducatedpickle.github.io/Cruzhacks-2019/search.html
